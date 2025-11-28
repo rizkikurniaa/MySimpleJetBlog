@@ -71,7 +71,7 @@ fun BlogItem(
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = blog.description,
+                    text = blog.fullContent,
                     style = MaterialTheme.typography.bodySmall,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
