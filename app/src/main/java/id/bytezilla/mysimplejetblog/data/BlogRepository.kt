@@ -26,7 +26,7 @@ class BlogRepository {
                         title = "Mastering Kotlin Coroutines",
                         fullContent = "Coroutines are a powerful feature in Kotlin that simplify asynchronous programming. They allow you to write asynchronous code in a sequential manner.\n\nThis post covers the basics of suspend functions, CoroutineScopes, and Dispatchers. We'll also look at how to use structured concurrency to ensure no coroutines are leaked. We will demonstrate fetching data from a network API and updating the database without blocking the main thread.\n\nBy the end of this guide, you'll be comfortable using launch and async builders in your Android apps.",
                         imageUrl = "https://picsum.photos/seed/coroutines/600/400",
-                        author = "Sarah Dev",
+                        author = "Bytezilla Studio",
                         date = "May 12, 2024"
                     ),
                     Blog(
