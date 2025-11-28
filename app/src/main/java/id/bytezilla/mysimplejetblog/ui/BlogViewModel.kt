@@ -42,7 +42,6 @@ class BlogViewModel(private val repository: BlogRepository) : ViewModel() {
         val newBlog = Blog(
             id = newId,
             title = "New Blog Post $newId",
-            description = "Description for new blog post $newId.",
             fullContent = "Full content for the newly added blog post $newId. \n\nAdded dynamically.",
             imageUrl = "https://picsum.photos/id/${(10..100).random()}/300/200",
             author = "Me",
