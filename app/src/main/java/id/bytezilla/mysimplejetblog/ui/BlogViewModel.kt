@@ -39,12 +39,22 @@ class BlogViewModel(private val repository: BlogRepository) : ViewModel() {
 
     fun addBlog() {
         val newId = System.currentTimeMillis()
+        val topics = listOf(
+            "Advanced Kotlin Tips",
+            "Understanding ProGuard",
+            "Gradle Build Optimization",
+            "Android Security Best Practices",
+            "Accessibility in Compose",
+            "Testing with Espresso"
+        )
+        val randomTopic = topics.random()
+
         val newBlog = Blog(
             id = newId,
-            title = "New Blog Post $newId",
-            fullContent = "Full content for the newly added blog post $newId. \n\nAdded dynamically.",
-            imageUrl = "https://picsum.photos/id/${(10..100).random()}/300/200",
-            author = "Me",
+            title = randomTopic,
+            fullContent = "This is a new article about $randomTopic. \n\nHere we will dive deep into the implementation details and best practices. \n\nAndroid development is constantly evolving, and keeping up with $randomTopic is essential for modern developers.",
+            imageUrl = "https://picsum.photos/seed/${newId}/600/400",
+            author = "Admin Blog",
             date = "Just Now"
         )
         repository.addBlog(newBlog)
