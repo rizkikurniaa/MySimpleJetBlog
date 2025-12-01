@@ -63,7 +63,7 @@ fun DetailScreen(
                         .fillMaxWidth()
                         .height(250.dp)
                 )
-                
+
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
                         text = blog.title,
