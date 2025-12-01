@@ -3,6 +3,7 @@ package id.bytezilla.mysimplejetblog.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import id.bytezilla.mysimplejetblog.R
 import id.bytezilla.mysimplejetblog.data.BlogRepository
 import id.bytezilla.mysimplejetblog.model.Blog
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -53,7 +54,7 @@ class BlogViewModel(private val repository: BlogRepository) : ViewModel() {
             id = newId,
             title = randomTopic,
             fullContent = "This is a new article about $randomTopic. \n\nHere we will dive deep into the implementation details and best practices. \n\nAndroid development is constantly evolving, and keeping up with $randomTopic is essential for modern developers.",
-            imageUrl = "https://picsum.photos/seed/${newId}/600/400",
+            imageUrl = R.drawable.jetpack,
             author = "Admin Blog",
             date = "Just Now"
         )
@@ -65,7 +66,8 @@ class BlogViewModel(private val repository: BlogRepository) : ViewModel() {
     }
 }
 
-class ViewModelFactory(private val repository: BlogRepository) : ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory(private val repository: BlogRepository) :
+    ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(BlogViewModel::class.java)) {
