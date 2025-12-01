@@ -38,7 +38,7 @@ fun BlogApp(modifier: Modifier = Modifier) {
                 }
             )
         }
-        
+
         composable(
             route = Screen.Detail.route,
             arguments = listOf(navArgument("blogId") { type = NavType.LongType })
@@ -52,7 +52,7 @@ fun BlogApp(modifier: Modifier = Modifier) {
                 }
             )
         }
-        
+
         composable(Screen.About.route) {
             AboutScreen(
                 navigateBack = {
