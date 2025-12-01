@@ -1,6 +1,5 @@
 package id.bytezilla.mysimplejetblog.ui.components
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -56,9 +55,9 @@ fun BlogItem(
                     .size(80.dp)
                     .clip(RoundedCornerShape(8.dp))
             )
-            
+
             Spacer(modifier = Modifier.width(16.dp))
-            
+
             Column(
                 modifier = Modifier.weight(1f)
             ) {
@@ -86,7 +85,7 @@ fun BlogItem(
 
             IconButton(onClick = { onDeleteClick(blog.id) }) {
                 Icon(
-                    imageVector = Icons.Default.Delete, 
+                    imageVector = Icons.Default.Delete,
                     contentDescription = "Delete Blog",
                     tint = MaterialTheme.colorScheme.error
                 )
